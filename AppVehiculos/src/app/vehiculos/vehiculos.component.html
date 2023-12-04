@@ -1,0 +1,77 @@
+<div class="px-4 mx-auto max-w-7xl sm:px-6">
+  <div class="relative pt-6 pb-16 sm:pb-24">
+      <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+          <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+              <div class="flex items-center justify-between w-full md:w-auto">
+                  <a href="#"><span class="sr-only">ANTUMALAL</span>
+                      <img class="w-auto h-8 sm:h-10" src="../../assets/img/LogoTalleres.png" loading="lazy" width="302" height="100">
+                  </a>
+                  <div class="flex items-center -mr-2 md:hidden">
+                      <button class="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-50 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-50"  type="button" aria-expanded="false">
+                          <span class="sr-only">Open main menu</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                          </svg>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="hidden md:flex md:space-x-10 list-none">
+              <li>
+                  <a href="#" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                      target="">VEHICULOS</a>
+              </li>
+              <li>
+                  <a href="#" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                      target="">INFORMES
+                  </a>
+              </li>
+              
+          </div>
+          <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+              <div class="inline-flex rounded-full shadow">
+                  <div href="#"
+                      class="inline-flex items-center px-4 py-2 text-base text-gray-900 bg-white border border-transparent rounded-full cursor-pointer font-base hover:bg-gray-50 ">
+                      Iniciar sesion
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </div>
+</div>
+<div>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+    Agregar Vehiculo
+  </button>
+</div>
+<div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table class="min-w-full text-left text-sm font-light">
+          <thead class="border-b font-medium dark:border-neutral-500">
+            <tr>
+              <th scope="col" class="px-6 py-4">ID</th>
+              <th scope="col" class="px-6 py-4">PATENTE</th>
+              <th scope="col" class="px-6 py-4">DESCRIPCION</th>
+              <th scope="col" class="px-6 py-4">SERVICIOS</th>
+              <th scope="col" class="px-6 py-4">ESTADO</th>
+            
+            </tr>
+          </thead>
+          <tbody *ngFor="let vehiculo of vehiculos">
+            <tr class="border-b dark:border-neutral-500">
+              <td class="whitespace-nowrap px-6 py-4">{{vehiculo.id}}</td>
+              <td class="whitespace-nowrap px-6 py-4">{{vehiculo.patente}}</td>
+              <td class="whitespace-nowrap px-6 py-4">{{vehiculo.descripcion}}</td>
+              <td class="whitespace-nowrap px-6 py-4">{{vehiculo.servicios}}</td>
+              <td class="whitespace-nowrap px-6 py-4">{{vehiculo.estado}}</td>
+            </tr>
+            
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
